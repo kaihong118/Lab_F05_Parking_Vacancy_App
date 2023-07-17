@@ -41,7 +41,9 @@ export default function SearchTableRow (props:Props) {
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
                 <TableCell component="th" scope="row" align="center">
-                    <img src={props.infoVacancyData.imageUrl} width={"180px"}/>
+                    {
+                        props.infoVacancyData.imageUrl && <img src={props.infoVacancyData.imageUrl} width={"180px"}/>
+                    }
                 </TableCell>
                 <TableCell align="left">{props.infoVacancyData.name}</TableCell>
                 <TableCell align="left">{props.infoVacancyData.displayAddress}</TableCell>

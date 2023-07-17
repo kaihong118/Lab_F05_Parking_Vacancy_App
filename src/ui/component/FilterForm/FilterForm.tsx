@@ -39,13 +39,11 @@ export default function FilterForm (props: Props) {
     const handleSearchText = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setSearchText("")
         setSearchText(event.currentTarget.value)
-        props.fetchSearchTableData()
     }
 
     const handleVehicleType = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setVehicleType("privateCar")
         setVehicleType(event.currentTarget.value)
-        props.fetchSearchTableData()
     }
 
     useEffect(() => {

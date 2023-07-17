@@ -17,7 +17,7 @@ type Props = {
 export default function SearchTable (props:Props) {
     const setSearchTableRow = () => {
             const filteredSearchList: CarParkInfoVacancyData[] = props.infoVacancyData.filter((infoVacancy) => (
-                infoVacancy.district?.toLowerCase().includes(props.searchText)
+                infoVacancy.district?.toLowerCase().includes(props.searchText.toLowerCase())
             ))
             return filteredSearchList.map((value: CarParkInfoVacancyData) => (
                 <SearchTableRow

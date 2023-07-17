@@ -16,10 +16,12 @@ export default function LandingPage () {
     const fetchSearchTableData = async () => {
         setInfoVacancyData([]);
 
-        const infoResponseData: ParkingLotData =  await ParkingDataApi.getParkingData()
-        const vacancyResponseData: VacancyData = await ParkingDataApi.getVacancyData()
+        const infoResponseData =  await ParkingDataApi.getParkingData()
+        const vacancyResponseData = await ParkingDataApi.getVacancyData()
 
-        setInfoVacancyData(mergeToInfoVacancy(infoResponseData, vacancyResponseData))
+        if(infoResponseData && vacancyResponseData) {
+            setInfoVacancyData(mergeToInfoVacancy(infoResponseData, vacancyResponseData))
+        }
     }
 
     useEffect(() => {

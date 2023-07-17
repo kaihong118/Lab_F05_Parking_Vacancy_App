@@ -17,7 +17,7 @@ export function mergeToInfoVacancy (infoDataList: ParkingLotData, vacancyDataLis
                     district:          infoData.district ?? "",
                     latitude:          infoData.latitude,
                     longitude:         infoData.longitude,
-                    imageUrl:          infoData.renditionUrls?.square ?? "",
+                    imageUrl:          infoData.renditionUrls?.square ?? infoData.renditionUrls?.carpark_photo ?? "",
                     privateCarVacancy: vacancyData.privateCar ? vacancyData.privateCar[0].vacancy : 0,
                     LGVVacancy:        vacancyData.LGV ? vacancyData.LGV[0].vacancy : 0,
                     HGVVacancy:        vacancyData.HGV ? vacancyData.HGV[0].vacancy : 0,
